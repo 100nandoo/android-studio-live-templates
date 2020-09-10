@@ -1,0 +1,33 @@
+<templateSet group="AndroidLiveData">
+  <template name="live" value="private val _$NAMES$LiveData = androidx.lifecycle.MutableLiveData&lt;$RETURN$&gt;()&#10;&#10;fun $NAMES$LiveData(): androidx.lifecycle.LiveData&lt;$RETURN$&gt; = _$NAMES$LiveData&#10;&#10;$END$" description="Create private LiveData &amp; public function to expose it" toReformat="true" toShortenFQNames="true">
+    <variable name="NAMES" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="RETURN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_CLASS" value="true" />
+    </context>
+  </template>
+  <template name="livez" value="private val _$NAMES$LiveData : androidx.lifecycle.MutableLiveData&lt;$RETURN$&gt; by lazy {androidx.lifecycle.MutableLiveData&lt;$RETURN$&gt;()}&#10;&#10;fun $NAMES$LiveData(): androidx.lifecycle.LiveData&lt;$RETURN$&gt; = _$NAMES$LiveData&#10;&#10;$END$" description="Create private lazy LiveData &amp; public function to expose it" toReformat="true" toShortenFQNames="true">
+    <variable name="NAMES" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="RETURN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_CLASS" value="true" />
+    </context>
+  </template>
+  <template name="TC" value="try {&#10;  $SELECTION$&#10;} catch (exception: Exception) {&#10;  $END$&#10;}" description="Surround with try catch" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="KOTLIN" value="true" />
+    </context>
+  </template>
+  <template name="live_sel" value="private val _$SELECTION$LiveData = androidx.lifecycle.MutableLiveData&lt;$RETURN$&gt;()&#10;&#10;fun $SELECTION$LiveData(): androidx.lifecycle.LiveData&lt;$RETURN$&gt; = _$SELECTION$LiveData&#10;&#10;$END$" description="Create private LiveData &amp; public function to expose it" toReformat="true" toShortenFQNames="true">
+    <variable name="RETURN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_CLASS" value="true" />
+    </context>
+  </template>
+  <template name="livez_sel" value="private val _$SELECTION$LiveData : androidx.lifecycle.MutableLiveData&lt;$RETURN$&gt; by lazy {androidx.lifecycle.MutableLiveData&lt;$RETURN$&gt;()}&#10;&#10;fun $SELECTION$LiveData(): androidx.lifecycle.LiveData&lt;$RETURN$&gt; = _$SELECTION$LiveData&#10;&#10;$END$" description="Create private lazy LiveData &amp; public function to expose it" toReformat="true" toShortenFQNames="true">
+    <variable name="RETURN" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_CLASS" value="true" />
+    </context>
+  </template>
+</templateSet>
